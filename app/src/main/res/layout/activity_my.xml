@@ -1,0 +1,311 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
+    tools:context=".MyActivity">
+
+
+
+
+
+    <!--<LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">-->
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/AvocadoButton"
+            android:background="@drawable/avobuttoner"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1" />
+
+
+    <!--</LinearLayout>-->
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 Avocados"
+        android:id="@+id/AvocadoCountText"
+        android:layout_below="@+id/AvocadoButton"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/AvocadoButton"
+        android:layout_alignRight="@id/AvocadoButton"
+        android:textSize="20sp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 per second"
+        android:id="@+id/AvocadosPerSecondText"
+        android:layout_below="@+id/AvocadoCountText"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/AvocadoButton"
+        android:layout_alignRight="@id/AvocadoButton"
+        android:textSize="20sp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="total: 0"
+        android:id="@+id/TotalText"
+        android:layout_below="@+id/AvocadosPerSecondText"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/AvocadoButton"
+        android:layout_alignRight="@id/AvocadoButton"
+        android:textSize="20sp"
+        android:textColor="#000000"/>
+
+
+
+    <com.kobihudson.looks.BuyButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seed"
+        android:id="@+id/AvocadoSeedButton"
+        android:background="@drawable/buttoner"
+        android:layout_alignTop="@+id/AvocadoButton"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/AvocadoButton"
+        android:maxHeight="60dp"
+        android:paddingBottom="30dp"
+        android:textSize="15sp"/>
+
+    <com.kobihudson.looks.BuyButton
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Tree"
+        android:id="@+id/AvocadoTreeButton"
+        android:background="@drawable/buttoner"
+        android:layout_toEndOf="@+id/AvocadoButton"
+        android:layout_below="@+id/AvocadoSeedButton"
+        android:layout_toRightOf="@+id/AvocadoButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:maxHeight="60dp"
+        android:paddingBottom="30dp"
+        android:textSize="15sp"/>
+
+    <com.kobihudson.looks.BuyButton
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Farm"
+        android:id="@+id/AvocadoFarmButton"
+        android:background="@drawable/buttoner"
+        android:layout_toEndOf="@+id/AvocadoButton"
+        android:layout_below="@+id/AvocadoTreeButton"
+        android:layout_toRightOf="@+id/AvocadoButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:maxHeight="60dp"
+        android:paddingBottom="30dp"
+        android:textSize="15sp"/>
+
+    <com.kobihudson.looks.BuyButton
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Factory"
+        android:id="@+id/AvocadoFactoryButton"
+        android:background="@drawable/buttoner"
+        android:layout_toEndOf="@+id/AvocadoButton"
+        android:layout_below="@+id/AvocadoFarmButton"
+        android:layout_toRightOf="@+id/AvocadoButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:maxHeight="60dp"
+        android:paddingBottom="30dp"
+        android:textSize="15sp"/>
+
+    <com.kobihudson.looks.BuyButton
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Breeder"
+        android:id="@+id/AvocadoBreederButton"
+        android:background="@drawable/buttoner"
+        android:layout_toEndOf="@+id/AvocadoButton"
+        android:layout_below="@+id/AvocadoFactoryButton"
+        android:layout_toRightOf="@+id/AvocadoButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:maxHeight="60dp"
+        android:paddingBottom="30dp"
+        android:textSize="15sp"/>
+
+    <com.kobihudson.looks.BuyButton
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Cloner"
+        android:id="@+id/AvocadoClonerButton"
+        android:background="@drawable/buttoner"
+        android:layout_toEndOf="@+id/AvocadoButton"
+        android:layout_below="@+id/AvocadoBreederButton"
+        android:layout_toRightOf="@+id/AvocadoButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:maxHeight="60dp"
+        android:paddingBottom="30dp"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="10"
+        android:id="@+id/costOfSeedsText"
+        android:layout_alignBottom="@+id/AvocadoSeedButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="1000"
+        android:id="@+id/costOfTreesText"
+        android:layout_alignBottom="@+id/AvocadoTreeButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="100000"
+        android:id="@+id/costOfFarmsText"
+        android:layout_alignBottom="@+id/AvocadoFarmButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="10000000"
+        android:id="@+id/costOfFactoryText"
+        android:layout_alignBottom="@+id/AvocadoFactoryButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="100000000"
+        android:id="@+id/costOfBreedersText"
+        android:layout_alignBottom="@+id/AvocadoBreederButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="100000000"
+        android:id="@+id/costOfClonersText"
+        android:layout_alignBottom="@+id/AvocadoClonerButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:textColor="#000000"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seedImageView"
+        android:src="@drawable/seed"
+        android:layout_alignTop="@+id/AvocadoSeedButton"
+        android:layout_alignBottom="@+id/AvocadoSeedButton"
+        android:layout_toRightOf="@+id/AvocadoButton"
+        android:layout_margin="3dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/treeImageView"
+        android:src="@drawable/tree"
+        android:layout_alignTop="@+id/AvocadoTreeButton"
+        android:layout_alignBottom="@+id/AvocadoTreeButton"
+        android:layout_toRightOf="@+id/AvocadoButton"
+        android:layout_margin="3dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/farmImageView"
+        android:src="@drawable/farm"
+        android:layout_alignTop="@+id/AvocadoFarmButton"
+        android:layout_alignBottom="@+id/AvocadoFarmButton"
+        android:layout_toRightOf="@+id/AvocadoButton"
+        android:layout_margin="5dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/factoryImageView"
+        android:src="@drawable/factory"
+        android:layout_alignTop="@+id/AvocadoFactoryButton"
+        android:layout_alignBottom="@+id/AvocadoFactoryButton"
+        android:layout_toRightOf="@+id/AvocadoButton"
+        android:layout_margin="3dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/breederImageView"
+        android:src="@drawable/breeder"
+        android:layout_alignTop="@+id/AvocadoBreederButton"
+        android:layout_alignBottom="@+id/AvocadoBreederButton"
+        android:layout_toRightOf="@+id/AvocadoButton"
+        android:layout_margin="5dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/clonerImageView"
+        android:src="@drawable/cloner"
+        android:layout_alignTop="@+id/AvocadoClonerButton"
+        android:layout_alignBottom="@+id/AvocadoClonerButton"
+        android:layout_toRightOf="@+id/AvocadoButton"
+        android:layout_margin="4dp"/>
+
+
+
+
+
+</RelativeLayout>
