@@ -50,15 +50,15 @@ public class MyActivity extends Activity {
                 (TextView)findViewById(R.id.costOfFarmsText));
 
         final BuyButton AvocadoFactoryButton = (BuyButton)findViewById(R.id.AvocadoFactoryButton);
-        AvocadoFactoryButton.setUpButton(BigDecimal.valueOf(10000), BigDecimal.valueOf(1000), avoBank,
+        AvocadoFactoryButton.setUpButton(BigDecimal.valueOf(10000), BigDecimal.valueOf(60), avoBank,
                 (TextView)findViewById(R.id.costOfFactoryText));
 
         final BuyButton AvocadoBreederButton = (BuyButton)findViewById(R.id.AvocadoBreederButton);
-        AvocadoBreederButton.setUpButton(BigDecimal.valueOf(100000), BigDecimal.valueOf(10000), avoBank,
+        AvocadoBreederButton.setUpButton(BigDecimal.valueOf(100000), BigDecimal.valueOf(400), avoBank,
                 (TextView)findViewById(R.id.costOfFactoryText));
 
         final BuyButton AvocadoClonerButton = (BuyButton)findViewById(R.id.AvocadoClonerButton);
-        AvocadoClonerButton.setUpButton(BigDecimal.valueOf(1000000), BigDecimal.valueOf(100000), avoBank,
+        AvocadoClonerButton.setUpButton(BigDecimal.valueOf(1000000), BigDecimal.valueOf(3000), avoBank,
                 (TextView)findViewById(R.id.costOfFactoryText));
 
         final ImageButton MainAvoButton = (ImageButton) findViewById(R.id.AvocadoButton);
