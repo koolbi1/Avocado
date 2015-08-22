@@ -21,6 +21,8 @@ public class BuyButton extends Button  {
     BigDecimal count;
     TextView costTextLabel;
 
+
+
     private static final String TAG = "BuyButton";
 
     public BuyButton(Context context) {
