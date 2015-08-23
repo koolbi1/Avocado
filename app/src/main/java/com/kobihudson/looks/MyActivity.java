@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.math.BigDecimal;
 import java.math.BigDecimal;
 import java.util.concurrent.ExecutorService;
@@ -18,9 +20,10 @@ import java.util.concurrent.Executors;
 
 public class MyActivity extends Activity {
 
-    AvocadoBank avoBank;
-    TextView avocadoCountText;
-    TextView avocadosPerSecondText;
+    static AvocadoBank avoBank;
+    static TextView avocadoCountText;
+    static TextView avocadosPerSecondText;
+    static Activity me;
 
 
     @Override
@@ -28,10 +31,12 @@ public class MyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
 
-
         avocadoCountText = (TextView)findViewById(R.id.AvocadoCountText);
         avocadosPerSecondText = (TextView)findViewById(R.id.AvocadosPerSecondText);
-        avoBank = new AvocadoBank(avocadoCountText, avocadosPerSecondText, this);
+
+        me = this;
+
+        avoBank = new AvocadoBank();
         TimeKeeper keeper = new TimeKeeper();
         keeper.addListener(avoBank);
         keeper.sendTimelyUpdates();//Starts a sending updates every second.
@@ -64,12 +69,27 @@ public class MyActivity extends Activity {
         final ImageButton MainAvoButton = (ImageButton) findViewById(R.id.AvocadoButton);
         MainAvoButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                avoBank.addOneToCount();
+                avoBank.addValueToCount(BigDecimal.ONE);
             }
         });
         //---------------------------------------------Buttons--------------------------------------
 
     }
+
+    public static void updateMainLabels() {
+        me.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                avocadoCountText.setText(avoBank.getAvocadoCount() + " Avocados");
+                avocadosPerSecondText.setText(avoBank.getAvocadosPerSecond() + " per second");
+            }
+        });
+    }
+
+    public static void saveGame(){
+        
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

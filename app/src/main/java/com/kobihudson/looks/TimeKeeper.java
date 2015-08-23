@@ -2,6 +2,9 @@ package com.kobihudson.looks;
 
 /**
  * Created by kobihudson on 8/22/15.
+ * This is a nice method that you can add TimeKeeperListeners to. If you add a listener to it the
+ * listener must implement a UpdateListener. This means it has an update method that knows what
+ * to do when the time keeper goes to update eveyrbody.
  */
 import android.util.Log;
 
@@ -34,13 +37,13 @@ public class TimeKeeper implements Runnable{
 
 
     //listener stuff ------------------------------------------
-    private List<TimeKeeperListener> listeners = new ArrayList<TimeKeeperListener>();
-    public void addListener(TimeKeeperListener toAdd) {
+    private List<UpdateListener> listeners = new ArrayList<UpdateListener>();
+    public void addListener(UpdateListener toAdd) {
         listeners.add(toAdd);
     }
 
     public void notifyListeners() {
-        for (TimeKeeperListener TKL : listeners) {
+        for (UpdateListener TKL : listeners) {
             //Log.e(TAG, "notify");
             try {
                 TKL.update();

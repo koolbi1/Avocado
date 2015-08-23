@@ -59,19 +59,6 @@
         android:textSize="20sp"
         android:textColor="#000000"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="total: 0"
-        android:id="@+id/TotalText"
-        android:layout_below="@+id/AvocadosPerSecondText"
-        android:layout_marginTop="10dp"
-        android:layout_alignLeft="@id/AvocadoButton"
-        android:layout_alignRight="@id/AvocadoButton"
-        android:textSize="20sp"
-        android:textColor="#000000"/>
-
-
 
     <com.kobihudson.looks.BuyButton
         android:layout_width="wrap_content"
@@ -183,7 +170,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="1000"
+        android:text="100"
         android:id="@+id/costOfTreesText"
         android:layout_alignBottom="@+id/AvocadoTreeButton"
         android:layout_alignParentRight="true"
@@ -196,7 +183,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="100000"
+        android:text="1000"
         android:id="@+id/costOfFarmsText"
         android:layout_alignBottom="@+id/AvocadoFarmButton"
         android:layout_alignParentRight="true"
@@ -209,7 +196,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="10000000"
+        android:text="10000"
         android:id="@+id/costOfFactoryText"
         android:layout_alignBottom="@+id/AvocadoFactoryButton"
         android:layout_alignParentRight="true"
@@ -222,7 +209,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="100000000"
+        android:text="100000"
         android:id="@+id/costOfBreedersText"
         android:layout_alignBottom="@+id/AvocadoBreederButton"
         android:layout_alignParentRight="true"
@@ -235,7 +222,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="100000000"
+        android:text="1000000"
         android:id="@+id/costOfClonersText"
         android:layout_alignBottom="@+id/AvocadoClonerButton"
         android:layout_alignParentRight="true"
