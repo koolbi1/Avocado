@@ -59,6 +59,7 @@ public class BuyButton extends Button  {
                     BigDecimal newCost = new BigDecimal(BuyButton.this.getCost().
                             multiply(BigDecimal.valueOf(1.1)).toBigInteger());
                     BuyButton.this.setCost(newCost);
+                    MyActivity.saveKeyAndVal(BuyButton.this.getId()+"", newCost.toString());
                     //Update label text as well as APS label
                     BuyButton.this.setCostText(newCost.toString());
                 }

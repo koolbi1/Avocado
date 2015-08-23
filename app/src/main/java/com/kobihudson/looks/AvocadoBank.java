@@ -36,6 +36,14 @@ public class AvocadoBank implements UpdateListener {
         return AvocadosPerSecond.toString();
     }
 
+    public void setAvocadoCount(BigDecimal avocadoCount) {
+        AvocadoCount = avocadoCount;
+    }
+
+    public void setAvocadosPerSecond(BigDecimal avocadosPerSecond) {
+        AvocadosPerSecond = avocadosPerSecond;
+    }
+
     public void addValueToCount(BigDecimal value){
         AvocadoCount = AvocadoCount.add(value);
         updateCountLabelAndSave();
@@ -71,6 +79,9 @@ public class AvocadoBank implements UpdateListener {
     //--------------------------------------Count Label---------------------------------------------
     public void updateCountLabelAndSave() {
         MyActivity.updateMainLabels();
+        MyActivity.saveKeyAndVal("aps", getAvocadosPerSecond());
+        MyActivity.saveKeyAndVal("count", getAvocadoCount());
+        MyActivity.saveKeyAndVal("time", System.currentTimeMillis()+"");
     }
     //--------------------------------------Count Label---------------------------------------------
 
